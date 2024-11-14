@@ -2,7 +2,7 @@ name: CI
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted", "k8s-prod-ubuntu-22"]
     env:
       ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
       MNEMONIC_TEST_ACCOUNT: ${{ secrets.MNEMONIC_TEST_ACCOUNT }}
@@ -24,7 +24,7 @@ jobs:
     - run: npm run lint
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted", "k8s-prod-ubuntu-22"]
     env:
       ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
       MNEMONIC_TEST_ACCOUNT: ${{ secrets.MNEMONIC_TEST_ACCOUNT }}
@@ -46,7 +46,7 @@ jobs:
     - run: npm test
 
   coverage:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted", "k8s-prod-ubuntu-22"]
     env:
       ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
       MNEMONIC_TEST_ACCOUNT: ${{ secrets.MNEMONIC_TEST_ACCOUNT }}
