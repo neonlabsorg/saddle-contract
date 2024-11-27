@@ -1,5 +1,5 @@
 # Adapted from https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
-FROM node:16-bullseye
+FROM node:18-bullseye
 
 ENV ALCHEMY_API="https://mainnet.infura.io/v3/5f79dfc1f8194c07bf7806064bb16bf9"
 ENV ALCHEMY_API_ROPSTEN="https://ropsten.infura.io/v3/5f79dfc1f8194c07bf7806064bb16bf9"
