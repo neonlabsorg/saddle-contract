@@ -4,7 +4,7 @@ name: CI
 
 jobs:
   docker:
-    runs-on: ["self-hosted", "k8s-prod-ubuntu-22"]
+    runs-on: ["gha-runner-scale-set"]
     steps:
       -
         name: Set up QEMU
