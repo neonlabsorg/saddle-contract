@@ -1,5 +1,7 @@
 name: Dev CI
 
+on:
+  workflow_dispatch:
 
 jobs:
   lint:
