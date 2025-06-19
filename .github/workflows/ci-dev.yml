@@ -3,7 +3,7 @@ name: Dev CI
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ["gha-runner-scale-set"]
     env:
       ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
       MNEMONIC_TEST_ACCOUNT: ${{ secrets.MNEMONIC_TEST_ACCOUNT }}
@@ -25,7 +25,7 @@ jobs:
     - run: npm run lint
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ["gha-runner-scale-set"]
     env:
       ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
       MNEMONIC_TEST_ACCOUNT: ${{ secrets.MNEMONIC_TEST_ACCOUNT }}
